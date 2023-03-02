@@ -19,6 +19,8 @@ const amino_acids = {
     V: { name: 'val', ppii_h: 0.39, helix: 0.99, hydr: 0.2947, lambda: 0.0, },
     W: { name: 'trp', ppii_h: 0.25, helix: 1.05, hydr: 0.4114, lambda: 0.0, },
     Y: { name: 'tyr', ppii_h: 0.25, helix: 0.67, hydr: 0.3113, lambda: 0.0, },
+    X: { name: 'ala', ppii_h: 0.37, helix: 1.42, hydr: 0.0728, lambda: 0.0, },
+    U: { name: 'cys', ppii_h: 0.25, helix: 0.73, hydr: 0.3557, lambda: 0.0, },
 };
 const amino_acid_keys = Object.keys(amino_acids);
 
@@ -59,6 +61,8 @@ function getResidues(input, windowSize) {
                 V: 0,
                 W: 0,
                 Y: 0,
+                X: 0,
+                U: 0,
             };
 
             for (let j = i; j < i + windowSize; j++) {
