@@ -138,7 +138,7 @@ class PartA {
         //    this.summary.download("csv", `${this.filename}_summary-a.csv`);
         //});
         this.downloadData.addEventListener('click', _ => {
-            this.data.download("csv", `${this.filename}_data-a.csv`);
+            this.data.download("csv", `${this.filename}_percent_of_set_recall-a.csv`);
         });
     }
 
