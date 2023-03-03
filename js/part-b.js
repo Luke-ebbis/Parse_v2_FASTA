@@ -180,10 +180,10 @@ class PartB {
         this.downloadData = document.getElementById('download-data-csv-b');
 
         this.downloadSummary.addEventListener('click', _ => {
-            this.summary.download("csv", `${this.filename}_summary-b.csv`);
+            this.summary.download("csv", `${this.filename}_sequence_properties.csv`);
         });
         this.downloadData.addEventListener('click', _ => {
-            this.data.download("csv", `${this.filename}_data-b.csv`);
+            this.data.download("csv", `${this.filename}_percent_of_set_recall-b.csv`);
         });
     }
 
