@@ -19,7 +19,7 @@
     </div>
     <main>
         <h1>ParSe v2: predict phase-separating protein regions from the primary sequence</h1>
-        <p>This is a form that allows you to enter a set of sequences and quickly find those predicted by the algorithm to drive protein-mediated physiological phase separation. The algorithm also determines if the set as a whole is enriched or depleted in phase separation potential compared to the reference human proteome, obtained from <a href="https://www.uniprot.org/">UniProt</a> during summer 2022.</p>
+        <p>This is a form that allows you to enter a set of sequences and quickly find those predicted to drive protein-mediated physiological phase separation. The algorithm also determines if the user-provided set is enriched or depleted in phase separation potential compared to the human proteome. Output includes a FASTA file containing the predicted phase-separating regions.</p>
         <p>To analyze a single protein sequence using ParSe v2, please visit <a href="https://stevewhitten.github.io/Parse_v2_web/">our other site</a>.</p>
         <p>The algorithm is described in Ibrahim et al, <a href="https://doi.org/10.1016/j.jbc.2022.102801"><i>J. Biol. Chem.</i> <b>299</b>, 102801 (2023)</a>.</p>
         <h3>Description</h3>
@@ -88,6 +88,10 @@
             </div>
             <div class="mb-10" id="data-b"></div>
         </div>
+            <div class="mb-10">
+            <label for="download">Predicted PS IDRs: </label>
+                <button id="download">Download FASTA</button>
+            </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"
         integrity="sha512-EAKzSKex+PXC0U9OG13r1059ysjrjkJEpZoONCnZa0mBROY28iBOOxZSErUVw1LzLr2+U5PhR7zPCPKidUVJqg=="
