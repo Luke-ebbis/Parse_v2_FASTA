@@ -3,6 +3,7 @@ const loadingTextEl = document.getElementById('loading-text');
 const inputFileEl = document.getElementById('input-file');
 const proteomeNameEl = document.getElementById('proteome-name');
 const submitEl = document.getElementById('submit');
+const downloadEl = document.getElementById('download');
 
 const proteins = [];
 
@@ -139,9 +140,37 @@ function submit() {
     handleFile(file);
 }
 
+function download() {
+    downloadFilteredFastaFile(filename);
+}
+
 function reset() {
     partA.reset();
     partB.reset();
 }
 
+function downloadFile(name, mime_type, data) {
+    const element = document.createElement("a");
+    const file = new Blob([data], { type: mime_type });
+    element.href = URL.createObjectURL(file);
+    element.download = name;
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
+
+function downloadFilteredFastaFile(name) {
+    var data = '';
+
+    proteins.forEach(protein => {
+        protein.regions.filter(region => region.region == "P" && region.end - region.start >= 50).forEach(region => {
+            data = data.concat('>','\n', protein.sequence.slice(region.start, region.end).join(''), '\n');
+        });
+    });
+
+    const MIME_TYPE = "text/plain";
+    downloadFile(`${name}_filtered.fasta`, MIME_TYPE, data);
+}
+
 submitEl.addEventListener('click', submit);
+downloadEl.addEventListener('click', download);
