@@ -164,7 +164,8 @@ function downloadFilteredFastaFile(name) {
 
     proteins.forEach(protein => {
         protein.regions.filter(region => region.region == "P" && region.end - region.start >= 50).forEach(region => {
-            data = data.concat('>','\n', protein.sequence.slice(region.start, region.end).join(''), '\n');
+            const [name1, name2, name3] = protein.id.split('|');
+            data = data.concat('> uniprot: ',name2,', residues: ',region.start+1,'-',region.end,'\n', protein.sequence.slice(region.start, region.end).join(''), '\n');
         });
     });
 
