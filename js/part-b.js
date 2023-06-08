@@ -58,7 +58,7 @@ class PartB {
                     sorter: 'number',
                 },
                 {
-                    title: 'longest PS IDR',
+                    title: 'length of longest PS IDR',
                     field: 'longest_ps_idr',
                     sorter: 'number',
                 },
@@ -78,7 +78,7 @@ class PartB {
                     sorter: 'number',
                 },
                 {
-                    title: 'longest non-PS IDR',
+                    title: 'length of longest non-PS IDR',
                     field: 'longest_nonPS_IDR',
                     sorter: 'number',
                 },
@@ -98,7 +98,7 @@ class PartB {
                     sorter: 'number',
                 },
                 {
-                    title: 'longest F-labeled region',
+                    title: 'length of longest F-labeled region',
                     field: 'longest_Fdomain',
                     sorter: 'number',
                 },
@@ -113,7 +113,7 @@ class PartB {
                     sorter: 'number',
                 },
                 {
-                    title: 'UniProt accession number',
+                    title: 'UniProtKB accession ID',
                     field: 'uniprot_id',
                     sorter: 'string',
                 },
