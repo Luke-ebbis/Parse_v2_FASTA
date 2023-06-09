@@ -13,7 +13,7 @@ class PartB {
             showlegend: true,
             xaxis: {
                 title: {
-                    text: 'PS potential (Σ classifier distance, P)',
+                    text: 'PS potential (Σ classifier distance P)',
                 },
             },
             yaxis: {
