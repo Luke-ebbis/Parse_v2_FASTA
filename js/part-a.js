@@ -13,7 +13,7 @@ class PartA {
             showlegend: true,
             xaxis: {
                 title: {
-                    text: 'predicted PS region length',
+                    text: 'length of longest predicted PS IDR',
                 },
             },
             yaxis: {
@@ -53,7 +53,7 @@ class PartA {
                     sorter: 'number',
                 },
                 {
-                    title: 'longest PS IDR (≥20)',
+                    title: 'length of longest PS IDR',
                     field: 'longest_ps_idr',
                     sorter: 'number',
                 },
@@ -68,7 +68,7 @@ class PartA {
                     sorter: 'number',
                 },
                 {
-                    title: 'UniProt accession number',
+                    title: 'UniProtKB accession ID',
                     field: 'uniprot_id',
                     sorter: 'string',
                 },
@@ -90,7 +90,7 @@ class PartA {
             layout: 'fitColumns',
             columns: [
                 {
-                    title: 'longest predicted PS IDR',
+                    title: 'length of longest PS IDR',
                     field: 'index',
                     sorter: 'number',
                 },
